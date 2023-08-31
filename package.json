@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/fordefam12/Awristocrats/issues"
   },
-  "homepage": "https://github.com/fordefam12/Awristocrats#readme"
+  "homepage": "https://github.com/fordefam12/Awristocrats#readme",
+  "dependencies": {
+    "@emailjs/browser": "^3.11.0"
+  }
 }
