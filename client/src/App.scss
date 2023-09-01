@@ -1,42 +1,117 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+$primary-color: #968525;
+
+// @import "animate.css";
+// @import '~loaders.css/src/animations/pacman.scss';
+
+@font-face {
+  font-family: 'Helventica Neue';
+  src: url('./assets/fonts/helvetica-neu.ttf') format('ttf')
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+@font-face {
+  font-family: 'La Belle Aurore';
+  src: url('./assets/fonts/LaBelleAurore.woff2') format('woff2')
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+
+@font-face {
+  font-family: 'hCoolvetica';
+  src: url('./assets/fonts/CoolveticaRg-Regular.woff2') format('woff2')
+}
+
+@font-face {
+  font-family: 'Hacked';
+  src: url('./assets/fonts/Hacked-KerX.ttf') format('ttf')
+}
+input, textarea{
+  font-family: 'Helventica Neue';
+}
+p{
+  font-family: 'Hacked';
+}
+@mixin glitchCopy {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 10px;
+  width: 100%;
+  height: 100%;
+}
+.glitch {
+  font-size: 5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+  text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
+    0.025em 0.04em 0 #fffc00;
+  animation: glitch 800ms infinite;
+}
+
+.glitch div {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.glitch div:first-child {
+  animation: glitch 500ms infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
+  transform: translate(-0.04em, -0.03em);
+  opacity: 0.75;
+}
+
+.glitch div:last-child {
+  animation: glitch 375ms infinite;
+  clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
+  transform: translate(0.04em, 0.03em);
+  opacity: 0.75;
+}
+
+@keyframes glitch {
+  0% {
+    text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
+      0.025em 0.04em 0 #fffc00;
   }
-  to {
-    transform: rotate(360deg);
+  15% {
+    text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
+      0.025em 0.04em 0 #fffc00;
+  }
+  16% {
+    text-shadow: -0.05em -0.025em 0 #00fffc, 0.025em 0.035em 0 #fc00ff,
+      -0.05em -0.05em 0 #fffc00;
+  }
+  49% {
+    text-shadow: -0.05em -0.025em 0 #00fffc, 0.025em 0.035em 0 #fc00ff,
+      -0.05em -0.05em 0 #fffc00;
+  }
+  50% {
+    text-shadow: 0.05em 0.035em 0 #00fffc, 0.03em 0 0 #fc00ff,
+      0 -0.04em 0 #fffc00;
+  }
+  99% {
+    text-shadow: 0.05em 0.035em 0 #00fffc, 0.03em 0 0 #fc00ff,
+      0 -0.04em 0 #fffc00;
+  }
+  100% {
+    text-shadow: -0.05em 0 0 #00fffc, -0.025em -0.04em 0 #fc00ff,
+      -0.04em -0.025em 0 #fffc00;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+// .Dna {
+//   display: block;
+//   position: absolute;
+//   margin: auto;
+//   width: 500px;
+//   height: 500px;
+//   animation: fadeOut 1s 1s ;
+//   animation-fill-mode: forwards;
+
+// }
+@media (max-width: 768px) {
+  /* Mobile styles */
 }
 
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Tablet styles */
 }
