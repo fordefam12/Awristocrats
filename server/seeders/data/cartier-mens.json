@@ -1,0 +1,441 @@
+{
+    "num_results": 5,
+    "watches": [
+        {
+            "wb": {
+                "id": 23379,
+                "added": "2016-10-20",
+                "modified": "2016-10-29",
+                "published": "2016-10-20"
+            },
+            "reference_number": "WF100015",
+            "name": "Calibre de Cartier 38 Pink Gold \/ Silver \/ Full Diamond",
+            "gender": "M",
+            "released": "2015",
+            "stopped": "",
+            "limited_nr": null,
+            "waterresistance": "30.00 m",
+            "description": "The Calibre de Cartier 38mm was introduced in 2015, some 5  years after the initial launch of this collection. Like it's bigger brother, it is powered by the in-house caliber 1904-PS. Apart from its smaller case, the dial design is slightly more conservative.\r\n\r\nReference WF100015 has a pink gold diamond-set case, a silver dial with diamond-set center and a semi-matte brown alligator strap.",
+            "brand": {
+                "id": 119,
+                "name": "Cartier",
+                "slug": "cartier",
+                "address": "13 Rue de la Paix",
+                "zipcode": "",
+                "city": "Paris",
+                "state": "",
+                "country_code": "FR",
+                "logo": "https:\/\/cdn.watchbase.com\/brand\/lg\/cartier-63.png",
+                "year_established": 1847,
+                "website": "http:\/\/www.cartier.com\/",
+                "pricerange_start": "4170.00",
+                "pricerange_end": "999999.99",
+                "pricerange_currency": "EUR",
+                "description": "Cartier was founded in Paris in 1847 by master jeweler Louis Francois Cartier. His son Alfred took over in 1874, but it would be the grandsons Louis, Pierre and Jacques lay the foundation for to building the brand into what it is today. The company would remain in hands of the family until 1972.\r\n\r\nWhile primarily a jewelry brand, Cartier has a rich and deep history when it comes to watches. It introduced its ladies wristwatch well before the end of the 19th century, while the first men's watch was designed in 1904 at the request of famous aviator Alberto Santos-Dumont. The latter would serve as the inspiration for the 1911 Santos wristwatch, one of many icons of the Parisian brand."
+            },
+            "family": {
+                "id": 683,
+                "name": "Calibre de Cartier",
+                "slug": "calibre-de-cartier",
+                "description": "The Calibre de Cartier was introduced in 2010. It was the first mass-production Cartier powered by an in-house movement, something previously only found in a handful of high-end watches by the Parisian brand. The round case is bold and modern, while the traditional sword-shaped hands and Roman numerals add a touch of the iconic Cartier flair. A bracelet option was added to the collection in 2011, while 2012 saw the introduction of the chronograph. The rather surprising Diver was introduced in 2013, pairing the Cartier aesthetics with true ISO dive watch specs. A smaller version of the regular Calibre de Cartier was introduced in 2015. Contrary to the larger version, this 38mm Calibre does not feature the triple date window, nor the half Roman\/ half stick dial.",
+                "image": ""
+            },
+            "caliber": {
+                "id": 1956,
+                "reference_number": "1904-PS MC",
+                "image": "https:\/\/cdn.watchbase.com\/caliber\/lg\/cartier\/1904-ps-mc-da.jpg",
+                "diameter": "25.60 mm",
+                "jewels": 27,
+                "frequency": "28800 bph",
+                "powerreserve": "48 h",
+                "brand": "Cartier",
+                "type": "Automatic",
+                "display": "Analog",
+                "description": "Self-winding movement with small seconds and date, introduced in 2010.",
+                "parent_caliber": null,
+                "acoustic": null,
+                "additional": null,
+                "astronomical": null,
+                "chronograph": null,
+                "date": "Date",
+                "hands": "Hours, Minutes, Small Seconds"
+            },
+            "case": {
+                "materials": [
+                    "Pink Gold"
+                ],
+                "bezel": "Gem-Set",
+                "glass": "Sapphire",
+                "back": "Open",
+                "shape": "Round",
+                "diameter": "38.00 mm",
+                "height": "9.26 mm"
+            },
+            "dial": {
+                "color": "Silver",
+                "indextype": "Roman Numerals",
+                "handstyle": "Sword"
+            },
+            "images": [
+                "https:\/\/cdn.watchbase.com\/watch\/md\/cartier\/calibre-de-cartier\/wf100015-b.png"
+            ],
+            "prices": [
+                {
+                    "currency": "EUR",
+                    "watch_price": "61000",
+                    "date": "2016-10-29"
+                }
+            ]
+        },
+        {
+            "wb": {
+                "id": 23547,
+                "added": "2016-10-26",
+                "modified": "2017-05-20",
+                "published": "2016-10-26"
+            },
+            "reference_number": "WSNM0005",
+            "name": "Drive de Cartier Second Time Zone Day \/ Night Stainless Steel \/ Silver",
+            "gender": "M",
+            "released": "2016",
+            "stopped": "",
+            "limited_nr": null,
+            "waterresistance": "30.00 m",
+            "description": "The Drive de Cartier is an automotive-inspired, cushion-shaped watch introduced in 2016. It is one of few Cartier collections that is mostly -if not exclusively- aimed at male customers.\r\n\r\nThe Drive de Cartier Second Time Zone Day \/ Night is powered by Cartier's in-house caliber 1904 with an added module for the additional functions. Reference WSNM0005 has a stainless steel case and a silver dial.",
+            "brand": {
+                "id": 119,
+                "name": "Cartier",
+                "slug": "cartier",
+                "address": "13 Rue de la Paix",
+                "zipcode": "",
+                "city": "Paris",
+                "state": "",
+                "country_code": "FR",
+                "logo": "https:\/\/cdn.watchbase.com\/brand\/lg\/cartier-63.png",
+                "year_established": 1847,
+                "website": "http:\/\/www.cartier.com\/",
+                "pricerange_start": "4170.00",
+                "pricerange_end": "999999.99",
+                "pricerange_currency": "EUR",
+                "description": "Cartier was founded in Paris in 1847 by master jeweler Louis Francois Cartier. His son Alfred took over in 1874, but it would be the grandsons Louis, Pierre and Jacques lay the foundation for to building the brand into what it is today. The company would remain in hands of the family until 1972.\r\n\r\nWhile primarily a jewelry brand, Cartier has a rich and deep history when it comes to watches. It introduced its ladies wristwatch well before the end of the 19th century, while the first men's watch was designed in 1904 at the request of famous aviator Alberto Santos-Dumont. The latter would serve as the inspiration for the 1911 Santos wristwatch, one of many icons of the Parisian brand."
+            },
+            "family": {
+                "id": 684,
+                "name": "Drive de Cartier",
+                "slug": "drive-de-cartier",
+                "description": "",
+                "image": ""
+            },
+            "caliber": {
+                "id": 1966,
+                "reference_number": "1904-FU MC",
+                "image": "https:\/\/cdn.watchbase.com\/caliber\/lg\/cartier\/1904-fu-mc-46.jpg",
+                "diameter": "25.60 mm",
+                "jewels": 27,
+                "frequency": "28800 bph",
+                "powerreserve": "48 h",
+                "brand": "Cartier",
+                "type": "Automatic",
+                "display": "Analog",
+                "description": "Self-winding, caliber 1904 with small seconds, with added module for big date, retrograde second time zone (12H) and day\/night indicator.",
+                "parent_caliber": "Cartier 1904-PS MC",
+                "acoustic": null,
+                "additional": null,
+                "astronomical": null,
+                "chronograph": null,
+                "date": "Big Date",
+                "hands": "Hours, Minutes, Small Seconds, Additional 12 Hour Hand (adjustable), Day \/ Night Indication"
+            },
+            "case": {
+                "materials": [
+                    "Stainless Steel"
+                ],
+                "glass": "Sapphire",
+                "back": "Open",
+                "shape": "Cushion",
+                "diameter": "41.00 mm",
+                "height": "12.63 mm"
+            },
+            "dial": {
+                "color": "Silver",
+                "finish": "Guilloche",
+                "indextype": "Roman Numerals",
+                "handstyle": "Sword"
+            },
+            "images": [
+                "https:\/\/cdn.watchbase.com\/watch\/md\/cartier\/drive-de-cartier\/wsnm0005-73.png"
+            ],
+            "prices": [
+                {
+                    "currency": "EUR",
+                    "watch_price": "8400",
+                    "date": "2017-05-20"
+                },
+                {
+                    "currency": "EUR",
+                    "watch_price": "8400",
+                    "date": "2016-10-29"
+                }
+            ]
+        },
+        {
+            "wb": {
+                "id": 23391,
+                "added": "2016-10-21",
+                "modified": "2016-10-22",
+                "published": "2016-10-21"
+            },
+            "reference_number": "WSRN0003",
+            "name": "Ronde Croisière de Cartier Stainless Steel \/ Grey",
+            "gender": "M",
+            "released": "2015",
+            "stopped": "",
+            "limited_nr": null,
+            "waterresistance": "100.00 m",
+            "description": "The Cartier Ronde Croisière ('Cruise') collection was introduced in 2015 as a casual and durable take on de Ronde de Cartier. Signature elements are the ADLC-coated bezel and the sturdy sword hands.\r\n\r\nReference WSRN0003 has a stainless steel case which houses the self-winding caliber 1847 MC. The dial is grey.",
+            "brand": {
+                "id": 119,
+                "name": "Cartier",
+                "slug": "cartier",
+                "address": "13 Rue de la Paix",
+                "zipcode": "",
+                "city": "Paris",
+                "state": "",
+                "country_code": "FR",
+                "logo": "https:\/\/cdn.watchbase.com\/brand\/lg\/cartier-63.png",
+                "year_established": 1847,
+                "website": "http:\/\/www.cartier.com\/",
+                "pricerange_start": "4170.00",
+                "pricerange_end": "999999.99",
+                "pricerange_currency": "EUR",
+                "description": "Cartier was founded in Paris in 1847 by master jeweler Louis Francois Cartier. His son Alfred took over in 1874, but it would be the grandsons Louis, Pierre and Jacques lay the foundation for to building the brand into what it is today. The company would remain in hands of the family until 1972.\r\n\r\nWhile primarily a jewelry brand, Cartier has a rich and deep history when it comes to watches. It introduced its ladies wristwatch well before the end of the 19th century, while the first men's watch was designed in 1904 at the request of famous aviator Alberto Santos-Dumont. The latter would serve as the inspiration for the 1911 Santos wristwatch, one of many icons of the Parisian brand."
+            },
+            "family": {
+                "id": 688,
+                "name": "Ronde de Cartier",
+                "slug": "ronde-de-cartier",
+                "description": "",
+                "image": ""
+            },
+            "caliber": {
+                "id": 1960,
+                "reference_number": "1847 MC",
+                "image": "https:\/\/cdn.watchbase.com\/caliber\/lg\/cartier\/1847-mc-8d.jpg",
+                "diameter": "25.60 mm",
+                "jewels": 23,
+                "frequency": "28800 bph",
+                "powerreserve": "42 h",
+                "brand": "Cartier",
+                "type": "Automatic",
+                "display": "Analog",
+                "description": "Self-winding movement with central seconds and date, introduced with the 2015 Cartier Clé collection.",
+                "parent_caliber": null,
+                "acoustic": null,
+                "additional": null,
+                "astronomical": null,
+                "chronograph": null,
+                "date": "Date",
+                "hands": "Hours, Minutes, Seconds"
+            },
+            "case": {
+                "materials": [
+                    "Stainless Steel"
+                ],
+                "bezel": "Rotating, 0-60 (Dive)",
+                "glass": "Sapphire",
+                "back": "Open",
+                "shape": "Round",
+                "diameter": "42.00 mm",
+                "height": "9.70 mm"
+            },
+            "dial": {
+                "color": "Grey",
+                "finish": "Guilloche",
+                "indextype": "Roman Numerals",
+                "handstyle": "Sword"
+            },
+            "images": [
+                "https:\/\/cdn.watchbase.com\/watch\/md\/cartier\/ronde-de-cartier\/wsrn0003-7f.png"
+            ],
+            "prices": [
+                {
+                    "currency": "EUR",
+                    "watch_price": "4250",
+                    "date": "2016-10-22"
+                }
+            ]
+        },
+        {
+            "wb": {
+                "id": 23549,
+                "added": "2016-10-26",
+                "modified": "2016-10-29",
+                "published": "2016-10-26"
+            },
+            "reference_number": "W1556368",
+            "name": "Rotonde de Cartier Second Time Zone Day \/ Night Stainless Steel \/ Silver",
+            "gender": "M",
+            "released": "2015",
+            "stopped": "",
+            "limited_nr": null,
+            "waterresistance": "30.00 m",
+            "description": "With its round case and straight lugs, the Rotonde de Cartier is one of the brand's more traditional designs - while retaining many Cartier signature elements. This collection consists primarily of watches with added complications.\r\n\r\nThe Rotonde de Cartier Second Time Zone Day \/ Night is powered by Cartier's in-house caliber 1904 with an added module for the additional functions. Reference W1556368 has a stainless steel case and a silver dial.",
+            "brand": {
+                "id": 119,
+                "name": "Cartier",
+                "slug": "cartier",
+                "address": "13 Rue de la Paix",
+                "zipcode": "",
+                "city": "Paris",
+                "state": "",
+                "country_code": "FR",
+                "logo": "https:\/\/cdn.watchbase.com\/brand\/lg\/cartier-63.png",
+                "year_established": 1847,
+                "website": "http:\/\/www.cartier.com\/",
+                "pricerange_start": "4170.00",
+                "pricerange_end": "999999.99",
+                "pricerange_currency": "EUR",
+                "description": "Cartier was founded in Paris in 1847 by master jeweler Louis Francois Cartier. His son Alfred took over in 1874, but it would be the grandsons Louis, Pierre and Jacques lay the foundation for to building the brand into what it is today. The company would remain in hands of the family until 1972.\r\n\r\nWhile primarily a jewelry brand, Cartier has a rich and deep history when it comes to watches. It introduced its ladies wristwatch well before the end of the 19th century, while the first men's watch was designed in 1904 at the request of famous aviator Alberto Santos-Dumont. The latter would serve as the inspiration for the 1911 Santos wristwatch, one of many icons of the Parisian brand."
+            },
+            "family": {
+                "id": 690,
+                "name": "Rotonde de Cartier",
+                "slug": "rotonde-de-cartier",
+                "description": "",
+                "image": ""
+            },
+            "caliber": {
+                "id": 1966,
+                "reference_number": "1904-FU MC",
+                "image": "https:\/\/cdn.watchbase.com\/caliber\/lg\/cartier\/1904-fu-mc-46.jpg",
+                "diameter": "25.60 mm",
+                "jewels": 27,
+                "frequency": "28800 bph",
+                "powerreserve": "48 h",
+                "brand": "Cartier",
+                "type": "Automatic",
+                "display": "Analog",
+                "description": "Self-winding, caliber 1904 with small seconds, with added module for big date, retrograde second time zone (12H) and day\/night indicator.",
+                "parent_caliber": "Cartier 1904-PS MC",
+                "acoustic": null,
+                "additional": null,
+                "astronomical": null,
+                "chronograph": null,
+                "date": "Big Date",
+                "hands": "Hours, Minutes, Small Seconds, Additional 12 Hour Hand (adjustable), Day \/ Night Indication"
+            },
+            "case": {
+                "materials": [
+                    "Stainless Steel"
+                ],
+                "glass": "Sapphire",
+                "back": "Open",
+                "shape": "Round",
+                "diameter": "42.00 mm",
+                "height": "11.96 mm"
+            },
+            "dial": {
+                "color": "Silver",
+                "indextype": "Roman Numerals",
+                "handstyle": "Sword"
+            },
+            "images": [
+                "https:\/\/cdn.watchbase.com\/watch\/md\/cartier\/rotonde-de-cartier\/w1556368-42.png"
+            ],
+            "prices": [
+                {
+                    "currency": "EUR",
+                    "watch_price": "8950",
+                    "date": "2016-10-29"
+                }
+            ]
+        },
+        {
+            "wb": {
+                "id": 23403,
+                "added": "2016-10-21",
+                "modified": "2016-10-29",
+                "published": "2016-10-21"
+            },
+            "reference_number": "WSSA0006",
+            "name": "Santos 100 41.3 Carbon",
+            "gender": "M",
+            "released": "",
+            "stopped": "",
+            "limited_nr": null,
+            "waterresistance": "100.00 m",
+            "description": "The Cartier Santos 100 is a decisively masculine take on the classic Santos, with the screwed bezel being one of the signature design elements.\r\n\r\nReference WSSA0006 has a stainless steel, ADLC-coated case of 51.1*41.3mm. It is fitted with an alligator strap. Motivation comes from caliber Cartier's in-house caliber 1847, which is a notable difference compared to the 'regular' Santos 100 models.",
+            "brand": {
+                "id": 119,
+                "name": "Cartier",
+                "slug": "cartier",
+                "address": "13 Rue de la Paix",
+                "zipcode": "",
+                "city": "Paris",
+                "state": "",
+                "country_code": "FR",
+                "logo": "https:\/\/cdn.watchbase.com\/brand\/lg\/cartier-63.png",
+                "year_established": 1847,
+                "website": "http:\/\/www.cartier.com\/",
+                "pricerange_start": "4170.00",
+                "pricerange_end": "999999.99",
+                "pricerange_currency": "EUR",
+                "description": "Cartier was founded in Paris in 1847 by master jeweler Louis Francois Cartier. His son Alfred took over in 1874, but it would be the grandsons Louis, Pierre and Jacques lay the foundation for to building the brand into what it is today. The company would remain in hands of the family until 1972.\r\n\r\nWhile primarily a jewelry brand, Cartier has a rich and deep history when it comes to watches. It introduced its ladies wristwatch well before the end of the 19th century, while the first men's watch was designed in 1904 at the request of famous aviator Alberto Santos-Dumont. The latter would serve as the inspiration for the 1911 Santos wristwatch, one of many icons of the Parisian brand."
+            },
+            "family": {
+                "id": 620,
+                "name": "Santos de Cartier",
+                "slug": "santos-de-cartier",
+                "description": "",
+                "image": ""
+            },
+            "caliber": {
+                "id": 1962,
+                "reference_number": "1847 MC No Date",
+                "image": "https:\/\/cdn.watchbase.com\/caliber\/lg\/cartier\/copy-of-1847-mc-58.jpg",
+                "diameter": "25.60 mm",
+                "jewels": 23,
+                "frequency": "28800 bph",
+                "powerreserve": "42 h",
+                "brand": "Cartier",
+                "type": "Automatic",
+                "display": "Analog",
+                "description": "Self-winding movement with central seconds, available both with and without date.",
+                "parent_caliber": "Cartier 1847 MC",
+                "acoustic": null,
+                "additional": null,
+                "astronomical": null,
+                "chronograph": null,
+                "date": null,
+                "hands": "Hours, Minutes, Seconds"
+            },
+            "case": {
+                "materials": [
+                    "Stainless Steel"
+                ],
+                "coating": "ADLC",
+                "glass": "Sapphire",
+                "back": "Closed",
+                "shape": "Square",
+                "diameter": "41.30 mm",
+                "height": "10.34 mm"
+            },
+            "dial": {
+                "color": "Black",
+                "finish": "Matte",
+                "indextype": "Roman Numerals",
+                "handstyle": "Sword"
+            },
+            "images": [
+                "https:\/\/cdn.watchbase.com\/watch\/md\/cartier\/santos-de-cartier\/wssa0006-5.png"
+            ],
+            "prices": [
+                {
+                    "currency": "EUR",
+                    "watch_price": "7350",
+                    "date": "2016-10-29"
+                }
+            ]
+        }
+    ]
+}
