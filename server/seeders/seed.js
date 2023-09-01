@@ -34,7 +34,7 @@ db.once('open', async () => {
         imageURL: '',
         price: 0,
     }
-
+    
     const watches = await Watch.insertMany(parsedData)
 })
 
