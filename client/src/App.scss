@@ -1,42 +1,105 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+$primary-color: #968525;
+
+// @import "animate.css";
+// @import '~loaders.css/src/animations/pacman.scss';
+
+@font-face {
+  font-family: 'Helventica Neue';
+  src: url('./assets/fonts/helvetica-neu.ttf') format('ttf')
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+@font-face {
+  font-family: 'La Belle Aurore';
+  src: url('./assets/fonts/LaBelleAurore.woff2') format('woff2')
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+
+@font-face {
+  font-family: 'hCoolvetica';
+  src: url('./assets/fonts/CoolveticaRg-Regular.woff2') format('woff2')
+}
+
+@font-face {
+  font-family: 'Hacked';
+  src: url('./assets/fonts/Hacked-KerX.ttf') format('ttf')
+}
+input, textarea{
+  font-family: 'Helventica Neue';
+}
+p{
+  font-family: 'Hacked';
+}
+/* styles.css */
+
+/* Navbar styles */
+.navbar {
+  background-color: #4d4d4d; /* Background color for the navbar */
+}
+
+.navbar-brand img {
+  max-height: 400px; /* Adjust the logo height as needed */
+  float: right;
+  
+  
+}
+
+.navbar-toggler-icon {
+  color: #fff; /* Color for the toggle icon (three lines) */
+}
+
+/* Navigation links styles */
+.navbar-nav .nav-item {
+  display: inline-block;
+  margin-right: 20px; /* Adjust spacing between tabs */
+  
+}
+
+.navbar-nav .nav-link {
+  color: #fff; /* Link text color */
+}
+
+.navbar-nav .nav-link.active {
+  background-color: #0056b3; /* Background color for the active tab */
+}
+/* Style for the cart icon and counter */
+.cart-link {
+  position: relative; /* Allows positioning of the counter */
+  text-decoration: none;
+  color: #fff; /* Text color for the cart link */
+  float: right;
+}
+
+.cart-link i {
+  font-size: 24px; /* Adjust the size of the cart icon */
+}
+
+.cart-counter {
+  position: absolute; /* Position the counter relative to its parent */
+  top: 0;
+  right: 0;
+  background-color: #ff5733; /* Background color of the counter */
+  color: #fff; /* Text color of the counter */
+  border-radius: 50%; /* Make it a circle */
+  padding: 4px 8px; /* Adjust padding to fit your design */
+  font-size: 12px; /* Adjust the font size of the counter */
+  
+}
+
+/* Adjust spacing between the logo and navigation tabs */
+@media (min-width: 768px) {
+  .navbar-brand {
+    margin-right: auto; /* Pushes the logo to the right */
   }
-  to {
-    transform: rotate(360deg);
+}
+
+/* Media query for smaller screens */
+@media (max-width: 767px) {
+  .navbar-nav {
+    flex-direction: column; /* Stack the tabs vertically */
+  }
+
+  .navbar-nav .nav-item {
+    margin-right: 0; /* Remove right margin for vertical tabs */
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
