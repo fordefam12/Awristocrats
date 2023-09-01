@@ -1,10 +1,7 @@
 import './index.scss'
 import NavTabs from '../NavTabs'
-// import ParticlesContainer from '../particles/ParticlesContainer'
-
-
 import { Outlet } from 'react-router-dom'
-import { Dna } from 'react-loader-spinner'
+
 const Layout = () => {
   return (
     <div className="APP layout ">

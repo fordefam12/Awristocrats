@@ -40,6 +40,7 @@ p{
   max-height: 400px; /* Adjust the logo height as needed */
   float: right;
   
+  
 }
 
 .navbar-toggler-icon {
@@ -59,6 +60,29 @@ p{
 
 .navbar-nav .nav-link.active {
   background-color: #0056b3; /* Background color for the active tab */
+}
+/* Style for the cart icon and counter */
+.cart-link {
+  position: relative; /* Allows positioning of the counter */
+  text-decoration: none;
+  color: #fff; /* Text color for the cart link */
+  float: right;
+}
+
+.cart-link i {
+  font-size: 24px; /* Adjust the size of the cart icon */
+}
+
+.cart-counter {
+  position: absolute; /* Position the counter relative to its parent */
+  top: 0;
+  right: 0;
+  background-color: #ff5733; /* Background color of the counter */
+  color: #fff; /* Text color of the counter */
+  border-radius: 50%; /* Make it a circle */
+  padding: 4px 8px; /* Adjust padding to fit your design */
+  font-size: 12px; /* Adjust the font size of the counter */
+  
 }
 
 /* Adjust spacing between the logo and navigation tabs */
