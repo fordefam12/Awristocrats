@@ -1,0 +1,22 @@
+.mens-watches-container {
+    text-align: center; // Center the watches horizontally
+  }
+  
+  .mens-watches {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; // Center the watches horizontally
+    gap: .1px; // Adjust the gap between watches as needed
+  
+    .watch {
+      width: calc(25% - 10px); // 25% width for each watch with a gap
+      margin: 10px; // Adjust margin as needed to control spacing
+      text-align: center;
+  
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+  

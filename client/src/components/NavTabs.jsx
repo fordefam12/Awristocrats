@@ -51,9 +51,9 @@ function NavTabs() {
               Women
             </Link>
           </li>
-          <a href="/Cart" class="cart-link">
-              <i class="fa fa-shopping-cart"></i>
-              <span class="cart-counter">Cart</span>
+          <a href="/Cart" className="cart-link">
+              <i className="fa fa-shopping-cart"></i>
+              <span className="cart-counter">Cart</span>
             </a>
         </ul>
       </div>
