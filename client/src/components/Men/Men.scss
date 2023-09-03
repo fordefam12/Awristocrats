@@ -1,22 +1,68 @@
 .mens-watches-container {
-    text-align: center; // Center the watches horizontally
-  }
-  
-  .mens-watches {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; // Center the watches horizontally
-    gap: .1px; // Adjust the gap between watches as needed
-  
-    .watch {
-      width: calc(25% - 10px); // 25% width for each watch with a gap
-      margin: 10px; // Adjust margin as needed to control spacing
-      text-align: center;
-  
-      img {
-        max-width: 100%;
-        height: auto;
-      }
+  text-align: center; // Center the watches horizontally
+  display: flex;
+}
+.sidebar {
+  width: 200px; /* Adjust the width as needed */
+  background-color: #f4f4f4;
+  padding: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.sidebar h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.sidebar label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+.main-content {
+  flex: 1;
+  padding: 20px;
+}
+
+.mens-watches {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; // Center the watches horizontally
+  gap: 0.1px; // Adjust the gap between watches as needed
+  // justify-content: space-between;
+
+  .watch {
+    width: calc(25% - 10px); // 25% width for each watch with a gap
+    margin: 10px; // Adjust margin as needed to control spacing
+    text-align: center;
+    margin-bottom: 20px;
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 10px;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
+
+    img {
+      max-width: 100%;
+      height: auto;
     }
   }
+  @media (max-width: 768px) {
+    .mens-watches {
+      justify-content: center;
+    }
   
+    .watch {
+      width: calc(50% - 10px);
+    }
+}
+}
