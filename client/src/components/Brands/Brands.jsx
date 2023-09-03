@@ -27,7 +27,7 @@ const Brands = () => {
     },
     {
       name: "Cartier",
-      image: "./src/assets/images/Logos/cartierLogo-removebg-preview.png",
+      image: "./src/assets/images/Logos/cartier-removebg-preview (1).png",
     },
   ];
 
@@ -42,7 +42,7 @@ const Brands = () => {
   return (
     <div className="brands-container">
       <h1>Our Brands</h1>
-      <div className={`brand-images ${selectedBrand ? "shrink" : ""}`}>
+      <div className={`brand-images ${selectedBrand ? "shrink" : ""}`} >
         {brandData.map((brand, index) => (
           <div className="brand" key={index}>
             <a

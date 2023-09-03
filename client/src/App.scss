@@ -1,4 +1,6 @@
-
+*{
+  color: #c5a028;
+}
 /* Navbar styles */
 .navbar {
   background-color: #4d4d4d; /* Background color for the navbar */
@@ -46,7 +48,7 @@
   top: 0;
   right: 0;
   background-color: #ff5733; /* Background color of the counter */
-  color: #fff; /* Text color of the counter */
+  color: #ffffff; /* Text color of the counter */
   border-radius: 50%; /* Make it a circle */
   padding: 4px 8px; /* Adjust padding to fit your design */
   font-size: 12px; /* Adjust the font size of the counter */
@@ -70,4 +72,6 @@
     margin-right: 0; /* Remove right margin for vertical tabs */
   }
 }
-
+p {
+  color: #c5a028;
+}

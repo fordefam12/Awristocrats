@@ -7,15 +7,19 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    
   }
   
   .brand {
     margin: 10px;
-    width: calc(33.33% - 20px); /* Adjust the width and margin as needed */
-  }
-  
-  .brand img {
+    width: calc(33.33% - 100px); /* Adjust the width and margin as needed */
     
+  }
+  .brand-text{
+    animation: cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+  .brand img {
+    max-height: 37.33px;
     max-width: 100%;
     height: auto;
     width: 100%; /* Ensure the image takes the full width of the parent */
@@ -33,6 +37,7 @@
 .brand-images.shrink .brand {
   flex: 1;
   max-width: 100px; /* Adjust the maximum width of the brand images */
+  
 }
 
 /* Styles for centering the watches and displaying them in columns of 4 */
@@ -46,7 +51,7 @@
   flex: 0 0 calc(25% - 20px); /* Adjust the width of each watch and the gap */
   margin: 10px; /* Adjust the margin around each watch */
   text-align: center;
-  background-color: #f8f8f8; /* Add a background color for watches */
+  background-color: #110404; /* Add a background color for watches */
   border: 1px solid #ddd; /* Add a border for watches */
   padding: 10px; /* Add padding for watches */
 }
