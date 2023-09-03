@@ -76,6 +76,8 @@ const Women = () => {
           </label>
         ))}
       </div>
+      <div className="main-content">
+        <h1>Watches</h1>
       <div className="Womens-watches">
         {filteredWatches.map((watch, index) => (
           <div className="watch" key={index}>
@@ -88,6 +90,7 @@ const Women = () => {
           </div>
         ))}
       </div>
+    </div>
     </div>
   );
 };

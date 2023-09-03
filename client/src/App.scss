@@ -1,35 +1,3 @@
-$primary-color: #968525;
-
-// @import "animate.css";
-// @import '~loaders.css/src/animations/pacman.scss';
-
-@font-face {
-  font-family: 'Helventica Neue';
-  src: url('./assets/fonts/helvetica-neu.ttf') format('ttf')
-}
-
-@font-face {
-  font-family: 'La Belle Aurore';
-  src: url('./assets/fonts/LaBelleAurore.woff2') format('woff2')
-}
-
-
-@font-face {
-  font-family: 'hCoolvetica';
-  src: url('./assets/fonts/CoolveticaRg-Regular.woff2') format('woff2')
-}
-
-@font-face {
-  font-family: 'Hacked';
-  src: url('./assets/fonts/Hacked-KerX.ttf') format('ttf')
-}
-input, textarea{
-  font-family: 'Helventica Neue';
-}
-p{
-  font-family: 'Hacked';
-}
-/* styles.css */
 
 /* Navbar styles */
 .navbar {

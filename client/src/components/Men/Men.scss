@@ -1,12 +1,18 @@
 .mens-watches-container {
-  text-align: center; // Center the watches horizontally
-  display: flex;
+ display: flex;
+  align-items: flex-start; // Align sidebar and content vertically at the top
+  padding: 2px; // Add padding to the container
+  text-align: center;
 }
 .sidebar {
-  width: 200px; /* Adjust the width as needed */
-  background-color: #f4f4f4;
-  padding: 20px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  flex: .3; // Let the sidebar take one-third of the available space
+    background-color: #f0f0f0; // Set the sidebar background color
+    padding: 20px; // Add padding to the sidebar
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 h2 {
   font-size: 1.2rem;
@@ -35,20 +41,22 @@ label {
 }
 
 .mens-watches {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; // Center the watches horizontally
-  gap: 0.1px; // Adjust the gap between watches as needed
-  // justify-content: space-between;
+  flex: 2.7; // Let the content take two-thirds of the available space
+    text-align: center; // Center the watches horizontally
+    padding: 2px; // Add padding to the content
+    display: flex;
+    flex-wrap: wrap; // Allow watches to wrap to the next row
+    justify-content: space-between; // Distribute space evenly between watches
+    gap: 2px; // Adjust the gap between watches as needed
 
   .watch {
-    width: calc(25% - 10px); // 25% width for each watch with a gap
-    margin: 10px; // Adjust margin as needed to control spacing
+    width: calc(33.33% - 10px); // 25% width for each watch with a gap
+    margin: 1px; // Adjust margin as needed to control spacing
     text-align: center;
     margin-bottom: 20px;
     text-align: center;
     border: 1px solid #ddd;
-    padding: 10px;
+    padding: 1px;
     box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
 
     img {
