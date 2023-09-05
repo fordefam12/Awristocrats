@@ -23,17 +23,6 @@ db.once('open', async () => {
         }
     })
     console.log(parsedData)
-    const temp = {
-        referenceNumber: "",
-        watchName: '',
-        gender: '',
-        watchDescription: '',
-        brandName: '',
-        brandLogo: '',
-        caliberImage: '',
-        imageURL: '',
-        price: 0,
-    }
 
     const watches = await Watch.insertMany(parsedData)
 
