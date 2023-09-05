@@ -35,6 +35,8 @@ type Auth {
 type Query {
     watches(brandName: String, gender: String): [Watch]
     watch(_id: ID!): Watch
+    user: User
+    order(_id: ID!): Order
 }
 
 type Mutation {
