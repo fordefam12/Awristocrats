@@ -19,7 +19,7 @@ db.once('open', async () => {
             brandLogo: watch.brand.logo,
             caliberImage: watch.caliber.image,
             imageURL: watch.images[0],
-            price: watch.prices ? watch.prices[0].watch_price : 0 //math.random? for null/0 prices in data
+            price: watch.prices ? watch.prices[0].watch_price : Math.floor(Math.random()*(80000-4427)+4427).toFixed(0) 
         }
     })
     console.log(parsedData)
