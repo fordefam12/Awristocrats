@@ -18,34 +18,37 @@ const resolvers = {
     },
     watch: async (parent, { _id }) =>{
       return await Watch.findById(_id)
-    }
-    // user: async (parent, args, context) => {
-    //   if (context.user) {
-    //     const user = await User.findById(context.user.id).populate({
-    //       path: 'orders.products',
-    //       populate: 'category',
-    //     });
+    },
+    //
+    user: async (parent, args, context) => {
+      if (context.user) {
+        const user = await User.findById(context.user.id).populate({
+          path: 'orders',
+          populate: 'watches',
+        });
 
-    //     user.orders.sort((a, b) => b.purchaseDate - a.purchaseDate);
+        user.orders.sort((a, b) => b.purchaseDate - a.purchaseDate);
 
-    //     return user;
-    //   }
+        return user;
+      }
 
-    //   throw AuthenticationError;
-    // },
-    // order: async (parent, { id }, context) => {
-    //   if (context.user) {
-    //     const user = await User.findById(context.user.id).populate({
-    //       path: 'orders.products',
-    //       populate: 'category',
-    //     });
+      throw AuthenticationError;
+    },
+    //
+    order: async (parent, {_id }, context) => {
+      if (context.user) {
+        const user = await User.findById(context.user.id).populate({
+          path: 'orders',
+          populate: 'watches',
+        });
 
-    //     return user.orders.id(id);
-    //   }
+        return user.orders.id(_id);
+      }
 
-    //   throw AuthenticationError;
-    // },
+      throw AuthenticationError;
+    },
   },
+  //
   Mutation: {
     addUser: async (parent, args) => {
       const user = await User.create(args);
@@ -53,20 +56,21 @@ const resolvers = {
 
       return { token, user };
     },
-    // addOrder: async (parent, { products }, context) => {
-    //   console.log(context);
-    //   if (context.user) {
-    //     const order = new Order({ products });
+    //
+    addOrder: async (parent, { watches }, context) => {
+      if (context.user) {
+        const order = new Order({ watches });
 
-    //     await User.findByIdAndUpdate(context.user.id, {
-    //       $push: { orders: order },
-    //     });
+        await User.findByIdAndUpdate(context.user._id, {
+          $push: { orders: order },
+        });
 
-    //     return order;
-    //   }
+        return await order.populate('watches');
+      }
 
-    //   throw AuthenticationError;
-    // },
+      throw AuthenticationError;
+    },
+    //
 
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
