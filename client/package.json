@@ -11,6 +11,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@apollo/client": "^3.8.3",
     "@emailjs/browser": "^3.11.0",
     "@fortawesome/free-brands-svg-icons": "^6.4.2",
     "@fortawesome/free-solid-svg-icons": "^6.4.2",
@@ -20,6 +21,7 @@
     "aos": "^2.3.4",
     "bootstrap": "^5.3.1",
     "gsap-trial": "^3.12.2",
+    "jwt-decode": "^3.1.2",
     "loaders.css": "^0.1.2",
     "react": "^18.2.0",
     "react-bootstrap": "^2.8.0",

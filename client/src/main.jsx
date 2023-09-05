@@ -8,6 +8,7 @@ import Home from './components/Home/Home.jsx'
 import Brands from './components/Brands/Brands.jsx'
 import Men from './components/Men/Men.jsx'
 import Women from './components/Women/Women.jsx'
+import Login from './components/Login.jsx'
 
 // Define the accessible routes, and which components respond to which URL
 const router = createBrowserRouter([
@@ -15,6 +16,7 @@ const router = createBrowserRouter([
     path: '/',
     errorElement: <Error />,
     element: <App />,
+    
     
     children: [
       {
@@ -33,6 +35,11 @@ const router = createBrowserRouter([
         path: '/Women',
         element: <Women />,
       },
+      {
+        path: '/',
+        element: <Login />
+
+      }
     ],
   },
 ])
