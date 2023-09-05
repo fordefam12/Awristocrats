@@ -8,6 +8,8 @@ import Home from './components/Home/Home.jsx'
 import Brands from './components/Brands/Brands.jsx'
 import Men from './components/Men/Men.jsx'
 import Women from './components/Women/Women.jsx'
+import Login from './components/Login.jsx'
+import Signup from './components/Signup.jsx'
 
 // Define the accessible routes, and which components respond to which URL
 const router = createBrowserRouter([
@@ -18,12 +20,12 @@ const router = createBrowserRouter([
     
     children: [
       {
-        path: '/Home',
-        element: <Home />,
+        element: <Brands />,
+        index: true
       },
       {
-        path: '/Brands',
-        element: <Brands />,
+        path: '/About',
+        element: <Home />,
       },
       {
         path: '/Men',
@@ -32,6 +34,14 @@ const router = createBrowserRouter([
       {
         path: '/Women',
         element: <Women />,
+      },
+      {
+        path: '/Login',
+        element: <Login />,
+      },
+      {
+        path: '/signup',
+        element: <Signup />,
       },
     ],
   },

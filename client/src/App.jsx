@@ -1,35 +1,39 @@
-import './App.scss'
-import { Route, Routes } from 'react-router-dom'
-import Layout from './components/Layout'
-import Home from './components/Home/Home'
-import Brands from './components/Brands/Brands';
-import Men from './components/Men/Men';
-import Women from './components/Women/Women';
+import { Outlet } from 'react-router-dom';
+import {
+  ApolloClient,
+  InMemoryCache,
+  ApolloProvider,
+  createHttpLink,
+} from '@apollo/client';
+import { setContext } from '@apollo/client/link/context';
+import NavTabs from './components/NavTabs';
 
-// import MagicGrid from './components/Projects/Projects'
+const httpLink = createHttpLink({
+  uri: '/graphql',
+});
 
+const authLink = setContext((_, { headers }) => {
+  const token = localStorage.getItem('id_token');
+  return {
+    headers: {
+      ...headers,
+      authorization: token ? `Bearer ${token}` : '',
+    },
+  };
+});
 
-
-
+const client = new ApolloClient({
+  link: authLink.concat(httpLink),
+  cache: new InMemoryCache(),
+});
 
 function App() {
-  // const showErrorPage = window.location.pathname === '/error';
-
   return (
-    <div>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route path="Brands" element={<Brands />} />
-          <Route path='Home' element={<Home />} />
-          <Route path="Men" element={<Men />} />
-          <Route path="Women" element={<Women />} />
-        </Route>
-      </Routes>
-       
-    </div>
+    <ApolloProvider client={client}>
+        <NavTabs />
+        <Outlet />
+    </ApolloProvider>
   );
 }
 
 export default App;
-
-
