@@ -25,6 +25,10 @@ db.once('open', async () => {
     console.log(parsedData)
 
     const watches = await Watch.insertMany(parsedData)
+
+    if (watches) {
+        process.exit(0)
+    }
 })
 
 
