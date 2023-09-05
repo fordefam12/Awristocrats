@@ -1,0 +1,16 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* This makes sure the container takes up the full viewport height */
+  }
+  
+  .center-content {
+    text-align: center;
+  }
+.welcome-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+}  

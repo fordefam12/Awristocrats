@@ -1,6 +1,7 @@
 const { GraphQLError } = require('graphql');
 const jwt = require('jsonwebtoken');
 
+// TODO: Put secret file into .env
 const secret = 'mysecretssshhhhhhh';
 const expiration = '2h';
 
@@ -10,11 +11,9 @@ module.exports = {
       code: 'UNAUTHENTICATED',
     },
   }),
-  authMiddleware({ req }) {
-    // Allows token to be sent via req.body, req.query, or headers
+  authMiddleware: function ({ req }) {
     let token = req.body.token || req.query.token || req.headers.authorization;
 
-    // ["Bearer", "<tokenvalue>"]
     if (req.headers.authorization) {
       token = token.split(' ').pop().trim();
     }

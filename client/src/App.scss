@@ -1,36 +1,6 @@
-$primary-color: #968525;
-
-// @import "animate.css";
-// @import '~loaders.css/src/animations/pacman.scss';
-
-@font-face {
-  font-family: 'Helventica Neue';
-  src: url('./assets/fonts/helvetica-neu.ttf') format('ttf')
+*{
+  color: #c5a028;
 }
-
-@font-face {
-  font-family: 'La Belle Aurore';
-  src: url('./assets/fonts/LaBelleAurore.woff2') format('woff2')
-}
-
-
-@font-face {
-  font-family: 'hCoolvetica';
-  src: url('./assets/fonts/CoolveticaRg-Regular.woff2') format('woff2')
-}
-
-@font-face {
-  font-family: 'Hacked';
-  src: url('./assets/fonts/Hacked-KerX.ttf') format('ttf')
-}
-input, textarea{
-  font-family: 'Helventica Neue';
-}
-p{
-  font-family: 'Hacked';
-}
-/* styles.css */
-
 /* Navbar styles */
 .navbar {
   background-color: #4d4d4d; /* Background color for the navbar */
@@ -78,7 +48,7 @@ p{
   top: 0;
   right: 0;
   background-color: #ff5733; /* Background color of the counter */
-  color: #fff; /* Text color of the counter */
+  color: #ffffff; /* Text color of the counter */
   border-radius: 50%; /* Make it a circle */
   padding: 4px 8px; /* Adjust padding to fit your design */
   font-size: 12px; /* Adjust the font size of the counter */
@@ -102,4 +72,6 @@ p{
     margin-right: 0; /* Remove right margin for vertical tabs */
   }
 }
-
+p {
+  color: #c5a028;
+}

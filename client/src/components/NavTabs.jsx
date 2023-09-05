@@ -27,15 +27,10 @@ function NavTabs() {
 
       <div className="collapse navbar-collapse" id="navbarNav">
         <ul className="navbar-nav">
-          <li className={`nav-item ${currentPage === "/" ? "active" : ""}`}>
-            <Link className="nav-link" to="/Home">
-              Home
-            </Link>
-          </li>
           <li
-            className={`nav-item ${currentPage === "/Brands" ? "active" : ""}`}
+            className={`nav-item ${currentPage === "/" ? "active" : ""}`}
           >
-            <Link className="nav-link" to="/Brands">
+            <Link className="nav-link" to="/">
               Brands
             </Link>
           </li>
@@ -51,13 +46,18 @@ function NavTabs() {
               Women
             </Link>
           </li>
-          <a href="/Cart" class="cart-link">
-              <i class="fa fa-shopping-cart"></i>
-              <span class="cart-counter">Cart</span>
-            </a>
+          <li className={`nav-item ${currentPage === "/About" ? "active" : ""}`}>
+            <Link className="nav-link" to="/About">
+              About
+            </Link>
+          </li>
+          <a href="/Cart" className="cart-link">
+            <i className="fa fa-shopping-cart"></i>
+            <span className="cart-counter">Cart</span>
+          </a>
         </ul>
       </div>
-      
+
     </nav>
   );
 }
