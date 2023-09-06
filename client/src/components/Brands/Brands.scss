@@ -42,20 +42,20 @@
 }
 
 /* Styles for centering the watches and displaying them in columns of 4 */
-.watches.center {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
+// .watches.center {
+//   display: flex;
+//   flex-wrap: wrap;
+//   justify-content: center;
+// }
 
-.watches.center .watch {
-  flex: 0 0 calc(25% - 20px); /* Adjust the width of each watch and the gap */
-  margin: 10px; /* Adjust the margin around each watch */
-  text-align: center;
-  background-color: #110404; /* Add a background color for watches */
-  border: 1px solid #ddd; /* Add a border for watches */
-  padding: 10px; /* Add padding for watches */
-}
+// .watches.center .watch {
+//   flex: 0 0 calc(25% - 20px); /* Adjust the width of each watch and the gap */
+//   margin: 10px; /* Adjust the margin around each watch */
+//   text-align: center;
+//   background-color: #110404; /* Add a background color for watches */
+//   border: 1px solid #ddd; /* Add a border for watches */
+//   padding: 10px; /* Add padding for watches */
+// }
 
 /* Media query to make watches responsive */
 @media (max-width: 768px) {
