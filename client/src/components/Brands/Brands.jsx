@@ -69,10 +69,11 @@ const Brands = () => {
               .map((watch, index) => (
                 <div className="watch" key={index}>
                   <img src={watch.imageURL} alt={watch.watchName} />
+                  <h2>{watch.brandName}</h2>
                   <p>{watch.watchName}</p>
                   <p>Reference Number: {watch.referenceNumber}</p>
-                  <p>Released: {watch.released}</p>
-                  <p>Limited Number: {watch.limited_nr}</p>
+                  <p>Price: €{watch.price}</p>
+                  <button>Add To Cart</button>
                   {/* Add other watch details here */}
                 </div>
               ))}
