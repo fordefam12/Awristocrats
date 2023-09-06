@@ -8,8 +8,15 @@ import Brand3 from "../../assets/images/Logos/Official-Patek-Philippe-Logo-remov
 import Brand4 from "../../assets/images/Logos/Longines-logo-500x281-removebg-preview.png";
 import Brand5 from "../../assets/images/Logos/jaeger-leCoultrewatch_logo_-_Google_Search-removebg-preview.png";
 import Brand6 from "../../assets/images/Logos/cartier-removebg-preview (1).png";
+import { useStoreContext } from "../GlobalState";
+import { ADD_TO_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
+import { idbPromise } from "../../utils/helpers";
 
 const Brands = () => {
+  const [state, dispatch] = useStoreContext();
+
+  const { cart } = state
+
   // Create an array of brand objects with image URLs and brand names
   const brandData = [
     {
@@ -30,7 +37,7 @@ const Brands = () => {
     },
     {
       name: "Jaeger-LeCoultre",
-      image: Brand5 ,
+      image: Brand5,
     },
     {
       name: "Cartier",
@@ -46,6 +53,29 @@ const Brands = () => {
   if (error) return <p>Error: {error.message}</p>;
   const watches = data.watches;
   // Extract a list of unique brand names from the queried data
+
+  const addToCart = (watch) => {
+    console.log(watch);
+    console.log(cart);
+    const itemInCart = cart.find((cartItem) => cartItem._id === watch._id)
+    if (itemInCart) {
+      dispatch({
+        type: UPDATE_CART_QUANTITY,
+        _id: watch._id,
+        purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1
+      });
+      idbPromise('cart', 'put', {
+        ...itemInCart,
+        purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1
+      });
+    } else {
+      dispatch({
+        type: ADD_TO_CART,
+        product: { ...watch, purchaseQuantity: 1 }
+      });
+      idbPromise('cart', 'put', { ...watch, purchaseQuantity: 1 });
+    }
+  }
 
   return (
     <div className="brands-container">
@@ -81,7 +111,7 @@ const Brands = () => {
                   <p>{watch.watchName}</p>
                   <p>Reference Number: {watch.referenceNumber}</p>
                   <p>Price: €{watch.price}</p>
-                  <button>Add To Cart</button>
+                  <button onClick={() => addToCart(watch)}>Add To Cart</button>
                   {/* Add other watch details here */}
                 </div>
               ))}

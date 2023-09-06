@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import "./index.scss";
 import Logo from "./Logo";
 import LogoN from '../../assets/images/fullAClogo.png'
+import Cart from '../Cart'
+
 const Home = () => {
   return (
     <div className="container home-page">
