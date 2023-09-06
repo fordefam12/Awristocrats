@@ -37,7 +37,7 @@ const Brands = () => {
   // Filter watches based on the selected brand
   const filteredWatches = selectedBrand
     ? watches.filter((watch) => watch.brand.name === selectedBrand)
-    : watches;
+    : [];
 
   return (
     <div className="brands-container">
@@ -53,25 +53,28 @@ const Brands = () => {
               <img src={brand.image} alt={`Brand ${index + 1}`} />
               <div className="brand-text"> {/* Container for the fading text */}
                 <p>{brand.name}</p>
-                </div>
+              </div>
             </a>
           </div>
         ))}
       </div>
-      <h2>Watches</h2>
-      <div className={`watches ${selectedBrand ? "center" : ""}`}>
-        
-        {filteredWatches.map((watch, index) => (
-          <div className="watch" key={index}>
-            <img src={watch.images[0]} alt={watch.name} />
-            <p>{watch.name}</p>
-            <p>Reference Number: {watch.reference_number}</p>
-            <p>Released: {watch.released}</p>
-            <p>Limited Number: {watch.limited_nr}</p>
-            {/* Add other watch details here */}
+      {selectedBrand && (
+        <>
+          <h2>Watches</h2>
+          <div className={`watches ${selectedBrand ? "center" : ""}`}>
+            {filteredWatches.map((watch, index) => (
+              <div className="watch" key={index}>
+                <img src={watch.images[0]} alt={watch.name} />
+                <p>{watch.name}</p>
+                <p>Reference Number: {watch.reference_number}</p>
+                <p>Released: {watch.released}</p>
+                <p>Limited Number: {watch.limited_nr}</p>
+                {/* Add other watch details here */}
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
+        </>
+      )}
     </div>
   );
 };
