@@ -11,6 +11,7 @@ import {
 import "../App.scss";
 import LogoS from "../assets/images/Logos/awristocrats logo.png";
 import auth from "../utils/auth";
+import Cart from "./Cart";
 
 function NavTabs() {
   const currentPage = useLocation().pathname;
@@ -20,7 +21,7 @@ function NavTabs() {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
-  
+
 
 
   return (
@@ -42,9 +43,8 @@ function NavTabs() {
       </button>
 
       <div
-        className={`collapse navbar-collapse ${
-          isMobileMenuOpen ? "show" : ""
-        }`}
+        className={`collapse navbar-collapse ${isMobileMenuOpen ? "show" : ""
+          }`}
       >
         <ul className="navbar-nav">
           <li className={`nav-item ${currentPage === "/" ? "active" : ""}`}>
@@ -90,8 +90,8 @@ function NavTabs() {
           {auth.loggedIn() ? (
             // Render Logout link when the user is logged in
             <li className={`nav-item ${currentPage === "/logout" ? "active" : ""}`}>
-              <Link className="nav-link" onClick= {()=>
-              auth.logout()}>
+              <Link className="nav-link" onClick={() =>
+                auth.logout()}>
                 Logout
               </Link>
             </li>
@@ -110,12 +110,17 @@ function NavTabs() {
               </li>
             </>
           )}
-        
+
         </ul>
-        <a href="/Cart" className="cart-link">
-          <FontAwesomeIcon icon={faShoppingCart} className="link-icon" />
-          <span className="cart-counter">Cart</span>
-        </a>
+        <li className={`nav-item ${currentPage === "/Cart" ? "active" : ""}`}>
+            <Link
+              className="nav-link link-icon"
+              to="/Cart"
+              data-text="Cart" // Specify the text to display on hover
+            >
+              <FontAwesomeIcon icon={faShoppingCart} className="link-icon" />
+            </Link>
+          </li>
       </div>
     </nav>
   );

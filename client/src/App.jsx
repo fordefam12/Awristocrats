@@ -7,7 +7,7 @@ import {
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 import NavTabs from './components/NavTabs';
-
+import { StoreProvider } from './components/GlobalState';
 
 
 const httpLink = createHttpLink({
@@ -32,8 +32,10 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
+      <StoreProvider>
         <NavTabs />
         <Outlet />
+      </StoreProvider>
     </ApolloProvider>
   );
 }
