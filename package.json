@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/fordefam12/Awristocrats#readme",
   "dependencies": {
+    "@stripe/stripe-js": "^2.1.2",
     "concurrently": "^8.2.1"
   }
 }
