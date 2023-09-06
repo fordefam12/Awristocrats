@@ -18,6 +18,7 @@ const router = createBrowserRouter([
     errorElement: <Error />,
     element: <App />,
     
+    
     children: [
       {
         element: <Brands />,

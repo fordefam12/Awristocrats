@@ -1,12 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import "../App.scss";
-import LogoS from "../assets/images/fullAClogo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faStore,
+  faMale,
+  faFemale,
+  faInfoCircle,
+  faShoppingCart,
+} from "@fortawesome/free-solid-svg-icons"; // Import FontAwesome icons
+import "../App.scss";
+import LogoS from "../assets/images/Logos/awristocrats logo.png";
 import auth from "../utils/auth";
 
 function NavTabs() {
   const currentPage = useLocation().pathname;
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
 
   
 
@@ -14,45 +26,65 @@ function NavTabs() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <Link className="navbar-brand" to="/Home">
-        <img src={LogoS} width={100} height={100} alt="Logo" />
+        <img
+          src={LogoS}
+          className="navbar-logo"
+          alt="Logo"
+        />
       </Link>
 
       <button
         className="navbar-toggler"
         type="button"
-        data-toggle="collapse"
-        data-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
+        onClick={toggleMobileMenu}
       >
         <span className="navbar-toggler-icon"></span>
       </button>
 
-      <div className="collapse navbar-collapse" id="navbarNav">
+      <div
+        className={`collapse navbar-collapse ${
+          isMobileMenuOpen ? "show" : ""
+        }`}
+      >
         <ul className="navbar-nav">
-          <li
-            className={`nav-item ${currentPage === "/" ? "active" : ""}`}
-          >
-            <Link className="nav-link" to="/">
-              Brands
+          <li className={`nav-item ${currentPage === "/" ? "active" : ""}`}>
+            <Link
+              className="nav-link link-icon"
+              to="/"
+              data-text="Brands" // Specify the text to display on hover
+            >
+              <FontAwesomeIcon icon={faStore} className="link-icon" />
             </Link>
           </li>
           <li className={`nav-item ${currentPage === "/Men" ? "active" : ""}`}>
-            <Link className="nav-link" to="/Men">
-              Men
+            <Link
+              className="nav-link link-icon"
+              to="/Men"
+              data-text="Men" // Specify the text to display on hover
+            >
+              <FontAwesomeIcon icon={faMale} className="link-icon" />
             </Link>
           </li>
           <li
             className={`nav-item ${currentPage === "/Women" ? "active" : ""}`}
           >
-            <Link className="nav-link" to="/Women">
-              Women
+            <Link
+              className="nav-link link-icon"
+              to="/Women"
+              data-text="Women" // Specify the text to display on hover
+            >
+              <FontAwesomeIcon icon={faFemale} className="link-icon" />
             </Link>
           </li>
-          <li className={`nav-item ${currentPage === "/About" ? "active" : ""}`}>
-            <Link className="nav-link" to="/About">
-              About
+          <li
+            className={`nav-item ${currentPage === "/About" ? "active" : ""}`}
+          >
+            <Link
+              className="nav-link link-icon"
+              to="/About"
+              data-text="About" // Specify the text to display on hover
+            >
+              <FontAwesomeIcon icon={faInfoCircle} className="link-icon" />
             </Link>
           </li>
           {auth.loggedIn() ? (
@@ -78,13 +110,13 @@ function NavTabs() {
               </li>
             </>
           )}
-          <a href="/Cart" className="cart-link">
-            <i className="fa fa-shopping-cart"></i>
-            <span className="cart-counter">Cart</span>
-          </a>
+        
         </ul>
+        <a href="/Cart" className="cart-link">
+          <FontAwesomeIcon icon={faShoppingCart} className="link-icon" />
+          <span className="cart-counter">Cart</span>
+        </a>
       </div>
-
     </nav>
   );
 }

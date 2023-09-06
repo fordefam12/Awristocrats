@@ -1,32 +1,34 @@
 .brands-container {
-    text-align: center;
-    padding: 20px;
-  }
-  
-  .brand-images {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    
-  }
-  
-  .brand {
-    margin: 10px;
-    width: calc(33.33% - 100px); /* Adjust the width and margin as needed */
-    
-  }
-  .brand-text{
-    animation: cubic-bezier(0.075, 0.82, 0.165, 1);
-  }
-  .brand img {
-    max-height: 37.33px;
-    max-width: 100%;
-    height: auto;
-    width: 100%; /* Ensure the image takes the full width of the parent */
-    height: auto; /* Maintain image aspect ratio */
-    object-fit: cover; /* Cover the container while preserving aspect ratio */
-  }
-  /* Styles for shrinking the brand images when a brand is selected */
+  text-align: center;
+  padding: 20px;
+}
+
+.brand-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+
+.brand {
+  margin: 10px;
+  width: calc(33.33% - 100px); /* Adjust the width and margin as needed */
+  display: inline-block;
+}
+
+.brand-text {
+  animation: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.brand img {
+  max-width: 50%;
+  width: 100%; /* Ensure the image takes the full width of the parent */
+  height: auto; /* Maintain image aspect ratio */
+  max-height: 67%;
+  object-fit: cover; /* Cover the container while preserving aspect ratio */
+}
+
+/* Styles for shrinking the brand images when a brand is selected */
 .brand-images.shrink {
   display: flex;
   flex-wrap: wrap;
@@ -37,7 +39,6 @@
 .brand-images.shrink .brand {
   flex: 1;
   max-width: 100px; /* Adjust the maximum width of the brand images */
-  
 }
 
 /* Styles for centering the watches and displaying them in columns of 4 */
