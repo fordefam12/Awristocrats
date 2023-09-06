@@ -3,7 +3,7 @@ import { REMOVE_FROM_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
 import { idbPromise } from "../../utils/helpers";
 
 const CartItem = ({ item }) => {
-
+  console.log(item);
   const [, dispatch] = useStoreContext();
 
   const removeFromCart = item => {
@@ -37,14 +37,15 @@ const CartItem = ({ item }) => {
 
   return (
     <div className="flex-row">
-      <div>
-        <img
-          src={`/images/${item.image}`}
-          alt=""
-        />
+      <div className="watch">
+        <img src={item.imageURL} alt={item.itemName} />
+        <h2>{item.brandName}</h2>
+        <p>{item.itemName}</p>
+        <p>Reference Number: {item.referenceNumber}</p>
+        <p>Price: €{item.price}</p>
+        {/* Add other watch details here */}
       </div>
       <div>
-        <div>{item.name}, ${item.price}</div>
         <div>
           <span>Qty:</span>
           <input
