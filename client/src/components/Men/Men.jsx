@@ -1,68 +1,44 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useQuery } from "@apollo/client"; // Import useQuery hook
 import "./Men.scss";
-import jsonData from "../../../../server/seeders/data/master-data.json";
-
-const { watches } = jsonData;
+import { QUERY_WATCHES } from "../../utils/queries"; // Import your queries
 
 const Men = () => {
   const [filter, setFilter] = useState({
     men: true,
     women: false,
-    selectedBrands: [], // Initialize selectedBrands as an empty array
+    selectedBrands: [],
   });
 
-  // Extract all unique brand names from the watches data
-  const uniqueBrands = Array.from(
-    new Set(watches.map((watch) => watch.brand.name))
-  );
-
-  // Function to handle brand checkbox changes
   const handleBrandCheckboxChange = (event) => {
     const { name, checked } = event.target;
-    if (checked) {
-      setFilter({
-        ...filter,
-        selectedBrands: [...filter.selectedBrands, name],
-      });
-    } else {
-      setFilter({
-        ...filter,
-        selectedBrands: filter.selectedBrands.filter((brand) => brand !== name),
-      });
-    }
+    setFilter({
+      ...filter,
+      selectedBrands: checked
+        ? [...filter.selectedBrands, name]
+        : filter.selectedBrands.filter((brand) => brand !== name),
+    });
   };
 
-  // Function to filter watches based on gender and selected brands
-  const filteredWatches = watches.filter(
-    (watch) =>
-      (filter.men && watch.gender === "M") ||
-      (filter.women && watch.gender === "W") ||
-      (filter.selectedBrands.length > 0 &&
-        filter.selectedBrands.includes(watch.brand.name))
+
+  const { loading, error, data } = useQuery(QUERY_WATCHES, {
+    variables: {
+      brandName: filter.selectedBrands.join(","), // Pass selected brands as a comma-separated string
+      gender: filter.men ? "M" : "", // Use "M" as gender filter if men checkbox is checked
+    },
+  });
+
+  if (loading) return <p>Loading...</p>;
+  const uniqueBrands = Array.from(
+    new Set(data?.watches.map((watch) => watch.brandName)) // Use the data from the query
   );
+  if (error) return <p>Error: {error.message}</p>;
+
+  const updatedWatches = data?.watches || [];
 
   return (
     <div className="mens-watches-container">
       <div className="sidebar">
-        <h2>Gender Filter</h2>
-        <label>
-          <input
-            type="checkbox"
-            name="men"
-            checked={filter.men}
-            onChange={handleBrandCheckboxChange}
-          />
-          Men
-        </label>
-        <label>
-          <input
-            type="checkbox"
-            name="women"
-            checked={filter.women}
-            onChange={handleBrandCheckboxChange}
-          />
-          Women
-        </label>
         <h2>Brand Filter</h2>
         {uniqueBrands.map((brand, index) => (
           <label key={index}>
@@ -78,12 +54,13 @@ const Men = () => {
       </div>
       <div className="main-content">
         <h1>Watches</h1>
+        <p>Number of Watches Displayed: {updatedWatches.length}</p>
         <div className="mens-watches">
-          {filteredWatches.map((watch, index) => (
+          {updatedWatches.map((watch, index) => (
             <div className="watch" key={index}>
-              <img src={watch.images[0]} alt={watch.name} />
-              <p>{watch.name}</p>
-              <p>Reference Number: {watch.reference_number}</p>
+              <img src={watch.imageURL} alt={watch.watchName} />
+              <p>{watch.watchName}</p>
+              <p>Reference Number: {watch.referenceNumber}</p>
               <p>Released: {watch.released}</p>
               <p>Limited Number: {watch.limited_nr}</p>
               {/* Add other watch details here */}
