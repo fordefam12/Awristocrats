@@ -2,37 +2,39 @@ import React, { useState } from "react";
 import "./Brands.scss";
 import { useQuery } from "@apollo/client";
 import { QUERY_WATCHES } from "../../utils/queries";
-import Brand1 from '../../assets/images/Logos/rolexlogo-removebg-preview.png'
+import Brand1 from "../../assets/images/Logos/rolexlogo-removebg-preview.png";
+import Brand2 from "../../assets/images/Logos/audemars_piguet_watch_logo_-_Google_Search-removebg-preview.png";
+import Brand3 from "../../assets/images/Logos/Official-Patek-Philippe-Logo-removebg-preview.png";
+import Brand4 from "../../assets/images/Logos/Longines-logo-500x281-removebg-preview.png";
+import Brand5 from "../../assets/images/Logos/jaeger-leCoultrewatch_logo_-_Google_Search-removebg-preview.png";
+import Brand6 from "../../assets/images/Logos/cartier-removebg-preview (1).png";
+
 const Brands = () => {
   // Create an array of brand objects with image URLs and brand names
   const brandData = [
     {
       name: "Rolex",
-      image: { Brand1 },
+      image: Brand1,
     },
     {
       name: "Audemars Piguet",
-      image:
-        "./src/assets/images/Logos/audemars_piguet_watch_logo_-_Google_Search-removebg-preview.png",
+      image: Brand2,
     },
     {
       name: "Patek Philippe",
-      image:
-        "./src/assets/images/Logos/Official-Patek-Philippe-Logo-removebg-preview.png",
+      image: Brand3,
     },
     {
       name: "Longines",
-      image:
-        "./src/assets/images/Logos/Longines-logo-500x281-removebg-preview.png",
+      image: Brand4,
     },
     {
       name: "Jaeger-LeCoultre",
-      image:
-        "./src/assets/images/Logos/jaeger-leCoultrewatch_logo_-_Google_Search-removebg-preview.png",
+      image: Brand5 ,
     },
     {
       name: "Cartier",
-      image: "./src/assets/images/Logos/cartier-removebg-preview (1).png",
+      image: Brand6,
     },
   ];
   const [selectedBrand, setSelectedBrand] = useState(null);
