@@ -33,3 +33,11 @@ export const QUERY_SINGLE_WATCH = gql`
     }
   }
 `
+// Not sure if this query is correct
+export const QUERY_CHECKOUT = gql`
+  query getCheckout($watchId: [ID]!) {
+    checkout(watches: $watchId) {
+      session
+    }
+  }
+`;

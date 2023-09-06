@@ -10,6 +10,8 @@ import Men from './components/Men/Men.jsx'
 import Women from './components/Women/Women.jsx'
 import Login from './components/Login.jsx'
 import Signup from './components/Signup.jsx'
+import Detail from './components/Detail.jsx'
+import Cart from './components/Cart/index.jsx'
 
 // Define the accessible routes, and which components respond to which URL
 const router = createBrowserRouter([
@@ -44,6 +46,14 @@ const router = createBrowserRouter([
         path: '/signup',
         element: <Signup />,
       },
+      {
+        path: '/brands/:id',
+        element: <Detail />
+      },
+      {
+        path: '/cart',
+        element: <Cart />
+      }
     ],
   },
 ])

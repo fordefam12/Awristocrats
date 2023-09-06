@@ -14,6 +14,7 @@ import {
 import "../App.scss";
 import LogoS from "../assets/images/Logos/awristocrats logo.png";
 import auth from "../utils/auth";
+import Cart from "./Cart";
 // import { FaUserCheck, FaUserPlus } from "react-icons/fa6";
 
 function NavTabs() {
@@ -125,10 +126,15 @@ function NavTabs() {
             </>
           )}
         </ul>
-        <a href="/Cart" className="cart-link">
-          <FontAwesomeIcon icon={faShoppingCart} className="link-icon" />
-          <span className="cart-counter">Cart</span>
-        </a>
+        <li className={`nav-item ${currentPage === "/Cart" ? "active" : ""}`}>
+            <Link
+              className="nav-link link-icon"
+              to="/Cart"
+              data-text="Cart" // Specify the text to display on hover
+            >
+              <FontAwesomeIcon icon={faShoppingCart} className="link-icon" />
+            </Link>
+          </li>
       </div>
     </nav>
   );

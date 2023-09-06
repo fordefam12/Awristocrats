@@ -11,7 +11,7 @@ const Women = () => {
   });
 
   // Extract all unique brand names from the watches data
- 
+
 
   // Function to handle brand checkbox changes
   const handleBrandCheckboxChange = (event) => {
@@ -27,7 +27,7 @@ const Women = () => {
   // Query watches data using Apollo Client's useQuery hook
   const { loading, error, data } = useQuery(QUERY_WATCHES, {
     variables: {
-      brandName: filter.selectedBrands.join(","), 
+      brandName: filter.selectedBrands.join(","),
       gender: filter.women ? "F" : "",
     },
   });
@@ -41,7 +41,7 @@ const Women = () => {
 
   // Filter watches based on selected brands
   const updatedWatches = data?.watches || [];
-console.log(updatedWatches)
+  console.log(updatedWatches)
   return (
     <div className="womens-watches-container">
       <div className="sidebar">
@@ -65,10 +65,11 @@ console.log(updatedWatches)
           {updatedWatches.map((watch, index) => (
             <div className="watch" key={index}>
               <img src={watch.imageURL} alt={watch.watchName} />
+              <h2>{watch.brandName}</h2>
               <p>{watch.watchName}</p>
               <p>Reference Number: {watch.referenceNumber}</p>
-              <p>Released: {watch.released}</p>
-              <p>Limited Number: {watch.limited_nr}</p>
+              <p>Price: €{watch.price}</p>
+              <button>Add To Cart</button>
               {/* Add other watch details here */}
             </div>
           ))}
