@@ -7,10 +7,14 @@ import {
   faFemale,
   faInfoCircle,
   faShoppingCart,
+  faUserAltSlash,
+  faUserPlus,
+  faUserCheck,
 } from "@fortawesome/free-solid-svg-icons"; // Import FontAwesome icons
 import "../App.scss";
 import LogoS from "../assets/images/Logos/awristocrats logo.png";
 import auth from "../utils/auth";
+// import { FaUserCheck, FaUserPlus } from "react-icons/fa6";
 
 function NavTabs() {
   const currentPage = useLocation().pathname;
@@ -20,17 +24,10 @@ function NavTabs() {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
-  
-
-
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <Link className="navbar-brand" to="/Home">
-        <img
-          src={LogoS}
-          className="navbar-logo"
-          alt="Logo"
-        />
+        <img src={LogoS} className="navbar-logo" alt="Logo" />
       </Link>
 
       <button
@@ -42,9 +39,7 @@ function NavTabs() {
       </button>
 
       <div
-        className={`collapse navbar-collapse ${
-          isMobileMenuOpen ? "show" : ""
-        }`}
+        className={`collapse navbar-collapse ${isMobileMenuOpen ? "show" : ""}`}
       >
         <ul className="navbar-nav">
           <li className={`nav-item ${currentPage === "/" ? "active" : ""}`}>
@@ -89,28 +84,46 @@ function NavTabs() {
           </li>
           {auth.loggedIn() ? (
             // Render Logout link when the user is logged in
-            <li className={`nav-item ${currentPage === "/logout" ? "active" : ""}`}>
-              <Link className="nav-link" onClick= {()=>
-              auth.logout()}>
-                Logout
+            <li
+              className={`nav-item ${
+                currentPage === "/logout" ? "active" : ""
+              }`}
+            >
+              <Link className="nav-link" onClick={() => auth.logout()}>
+                <FontAwesomeIcon icon={faUserAltSlash} className="link-icon" />
               </Link>
             </li>
           ) : (
             // Render Login and Signup links when the user is not logged in
             <>
-              <li className={`nav-item ${currentPage === "/signup" ? "active" : ""}`}>
-                <Link className="nav-link" to="/signup">
-                  Signup
+              <li
+                className={`nav-item ${
+                  currentPage === "/signup" ? "active" : ""
+                }`}
+              >
+                <Link
+                  className="nav-link link-icon"
+                  to="/signup"
+                  data-text="SignUp"
+                >
+                  <FontAwesomeIcon icon={faUserPlus} className="link-icon" />
                 </Link>
               </li>
-              <li className={`nav-item ${currentPage === "/login" ? "active" : ""}`}>
-                <Link className="nav-link" to="/login">
-                  Login
+              <li
+                className={`nav-item ${
+                  currentPage === "/login" ? "active" : ""
+                }`}
+              >
+                <Link
+                  className="nav-link link-icon"
+                  to="/login"
+                  data-text="Login"
+                >
+                  <FontAwesomeIcon icon={faUserCheck} className="link-icon" />
                 </Link>
               </li>
             </>
           )}
-        
         </ul>
         <a href="/Cart" className="cart-link">
           <FontAwesomeIcon icon={faShoppingCart} className="link-icon" />
