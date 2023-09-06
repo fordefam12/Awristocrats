@@ -36,7 +36,7 @@ const Women = () => {
   const filteredWatches = watches.filter(
     (watch) =>
       (filter.men && watch.gender === "M") ||
-      (filter.women && watch.gender === "W") ||
+      (filter.women && watch.gender === "F") ||
       (filter.selectedBrands.length > 0 &&
         filter.selectedBrands.includes(watch.brand.name))
   );
