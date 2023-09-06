@@ -7,7 +7,7 @@ const Brands = () => {
   const brandData = [
     {
       name: "Rolex",
-      image: "./src/assets/images/Logos/rolexLogo.png",
+      image: "./src/assets/images/Logos/rolexLogo-removebg-preview.png",
     },
     {
       name: "Audemars Piguet",
