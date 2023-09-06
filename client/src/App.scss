@@ -13,7 +13,9 @@ body {
   padding: 0;
   height: 100vh;
 }
-
+div .brand {
+height: 100px;
+}
 /* Navbar styles */
 .navbar {
   background-color: #000000;
@@ -23,6 +25,7 @@ body {
 .navbar-brand img {
   max-height: 100px;
   float: right;
+  
 }
 
 .navbar-toggler-icon {
@@ -98,16 +101,6 @@ body {
   font-size: 24px;
 }
 
-// .cart-counter {
-//   position: absolute;
-//   top: 0;
-//   right: 0;
-//   background-color: #ff5733;
-//   color: #ffffff;
-//   border-radius: 50%;
-//   padding: 4px 8px;
-//   font-size: 12px;
-// }
 
 /* Adjust spacing between the logo and navigation tabs */
 @media (min-width: 768px) {
@@ -130,3 +123,5 @@ body {
 p {
   color: #c5a028;
 }
+
+
