@@ -10,6 +10,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons"; // Import FontAwesome icons
 import "../App.scss";
 import LogoS from "../assets/images/Logos/awristocrats logo.png";
+import auth from "../utils/auth";
 
 function NavTabs() {
   const currentPage = useLocation().pathname;
@@ -18,6 +19,9 @@ function NavTabs() {
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
+
+  
+
 
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -83,6 +87,30 @@ function NavTabs() {
               <FontAwesomeIcon icon={faInfoCircle} className="link-icon" />
             </Link>
           </li>
+          {auth.loggedIn() ? (
+            // Render Logout link when the user is logged in
+            <li className={`nav-item ${currentPage === "/logout" ? "active" : ""}`}>
+              <Link className="nav-link" onClick= {()=>
+              auth.logout()}>
+                Logout
+              </Link>
+            </li>
+          ) : (
+            // Render Login and Signup links when the user is not logged in
+            <>
+              <li className={`nav-item ${currentPage === "/signup" ? "active" : ""}`}>
+                <Link className="nav-link" to="/signup">
+                  Signup
+                </Link>
+              </li>
+              <li className={`nav-item ${currentPage === "/login" ? "active" : ""}`}>
+                <Link className="nav-link" to="/login">
+                  Login
+                </Link>
+              </li>
+            </>
+          )}
+        
         </ul>
         <a href="/Cart" className="cart-link">
           <FontAwesomeIcon icon={faShoppingCart} className="link-icon" />
