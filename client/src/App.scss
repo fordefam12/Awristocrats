@@ -1,77 +1,132 @@
-*{
+* {
   color: #c5a028;
+  background-color: black;
+  font-family: Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
 }
+
+body {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
 /* Navbar styles */
 .navbar {
-  background-color: #4d4d4d; /* Background color for the navbar */
+  background-color: #000000;
+  padding: 15px 0;
 }
 
 .navbar-brand img {
-  max-height: 400px; /* Adjust the logo height as needed */
+  max-height: 100px;
   float: right;
-  
-  
 }
 
 .navbar-toggler-icon {
-  color: #fff; /* Color for the toggle icon (three lines) */
+  color: #fff;
 }
 
 /* Navigation links styles */
 .navbar-nav .nav-item {
   display: inline-block;
-  margin-right: 20px; /* Adjust spacing between tabs */
-  
+  margin-right: 20px;
 }
 
 .navbar-nav .nav-link {
-  color: #fff; /* Link text color */
+  color: #ffffff;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #e99f00;
+  
 }
 
 .navbar-nav .nav-link.active {
-  background-color: #0056b3; /* Background color for the active tab */
+  background-color: #0056b3;
 }
+/* Add a class to style links with icons */
+.link-icon {
+  position: relative;
+  padding: 10px;
+
+  /* Style for the FontAwesome icons */
+  svg {
+    transition: opacity 0.3s ease; /* Add opacity transition */
+  }
+
+  /* Pseudo-element for displaying the link text */
+  &::before {
+    content: attr(data-text); /* Display the link text */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Add opacity transition */
+  }
+
+  /* Hover effect to show link text and hide the icon */
+  &:hover {
+    svg {
+      opacity: 0; /* Hide the icon */
+    }
+
+    &::before {
+      opacity: 1; /* Show the link text */
+    }
+  }
+}
+
+/* Rest of your existing styles... */
+
 /* Style for the cart icon and counter */
 .cart-link {
-  position: relative; /* Allows positioning of the counter */
+  position: relative;
   text-decoration: none;
-  color: #fff; /* Text color for the cart link */
+  color: #fff;
   float: right;
 }
 
 .cart-link i {
-  font-size: 24px; /* Adjust the size of the cart icon */
+  font-size: 24px;
 }
 
-.cart-counter {
-  position: absolute; /* Position the counter relative to its parent */
-  top: 0;
-  right: 0;
-  background-color: #ff5733; /* Background color of the counter */
-  color: #ffffff; /* Text color of the counter */
-  border-radius: 50%; /* Make it a circle */
-  padding: 4px 8px; /* Adjust padding to fit your design */
-  font-size: 12px; /* Adjust the font size of the counter */
-  
-}
+// .cart-counter {
+//   position: absolute;
+//   top: 0;
+//   right: 0;
+//   background-color: #ff5733;
+//   color: #ffffff;
+//   border-radius: 50%;
+//   padding: 4px 8px;
+//   font-size: 12px;
+// }
 
 /* Adjust spacing between the logo and navigation tabs */
 @media (min-width: 768px) {
   .navbar-brand {
-    margin-right: auto; /* Pushes the logo to the right */
+    margin-right: auto;
   }
 }
 
 /* Media query for smaller screens */
 @media (max-width: 767px) {
   .navbar-nav {
-    flex-direction: column; /* Stack the tabs vertically */
+    flex-direction: column;
   }
 
   .navbar-nav .nav-item {
-    margin-right: 0; /* Remove right margin for vertical tabs */
+    margin-right: 0;
   }
 }
+
 p {
   color: #c5a028;
 }
