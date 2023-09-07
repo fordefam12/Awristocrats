@@ -53,6 +53,8 @@ The primary purpose of this project is to create an online shopping experience f
 
 
 ## Screenshots
+
+![screenshots](client/src/assets/images/Awristocrats.png)
+
 ![screenshot2](<Awristocrats (2).png>)
 
-![screenshot](Awristocrats.png)
