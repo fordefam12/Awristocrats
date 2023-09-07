@@ -37,7 +37,8 @@ const Brands = () => {
     },
     {
       name: "Jaeger-LeCoultre",
-      image: Brand5,
+      image: Brand5 ,
+      
     },
     {
       name: "Cartier",

@@ -72,7 +72,7 @@ Any questions about this project please send me a message on *https://github.com
 
 ## Screenshots
 
-![screenshots](client/src/assets/images/Awristocrats.png)
+![screenshot](client/src/assets/images/Awristocrats.png)
 
 ![screenshot2](<Awristocrats (2).png>)
 
