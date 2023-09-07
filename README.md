@@ -18,7 +18,13 @@
     
 *[Usage](#usage)
     
+*[License](#license)
+    
 *[Contributors](#contributor)
+    
+*[Tests](#test)
+    
+*[Questions](#questions)
 
 *[URL](#URL)
     
@@ -43,6 +49,18 @@ The primary purpose of this project is to create an online shopping experience f
              ![SCSS:](https://img.shields.io/badge/SCSS-18.5%25-purple)
 
 
+<p align='center'>
+<a><img src="https://github-readme-stats.vercel.app/api?username=fordefam12&show_icons=true&theme=transparent" alt="fordefam12's github stats"></a>
+<a><img src="https://github-readme-stats.vercel.app/api/top-langs/?username=fordefam12&layout=compact" height ="20%" width= "27%"></a>
+</p>
+
+
+## Tests
+N/A
+
+
+## Questions
+Any questions about this project please send me a message on *https://github.com/fordefam12 or email me at [fordefam12@gmail.com]
 
 ## URL
 
@@ -52,6 +70,9 @@ The primary purpose of this project is to create an online shopping experience f
 </p>
 
 
+## Screenshots
+
+![screenshot](client/src/assets/images/Awristocrats.png)
 ## Screenshots
 ![screenshot2](<Awristocrats (2).png>)
 
