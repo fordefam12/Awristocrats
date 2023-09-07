@@ -80,6 +80,7 @@ const Brands = () => {
   return (
     <div className="brands-container">
       <h1>Our Brands</h1>
+      <br/><br/>
       <div className={`brand-images ${selectedBrand ? "shrink" : ""}`}>
         {brandData.map((brand, index) => (
           <div className="brand" key={index}>
@@ -92,7 +93,7 @@ const Brands = () => {
               <div className="brand-text">
                 {" "}
                 {/* Container for the fading text */}
-                <p>{brand.name}</p>
+                {/* <p>{brand.name}</p> */}
               </div>
             </a>
           </div>
